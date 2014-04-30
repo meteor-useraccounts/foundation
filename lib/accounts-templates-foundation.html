@@ -38,25 +38,29 @@
         </div>
       {{/if}}
       {{#if passwordLoginService}}
-        <form role="form" class="at-form">
+        <form class="at-form">
           {{#each fields}}
             {{#if displayField}}
-              <div class="form-group {{hasError}} {{hasFeedback}}">
-                {{# if displayFormLabels}}
-                  <label for="AT_field_{{name}}" class="control-label">{{displayName}}</label>
-                {{/if}}
-                <input type="{{type}}" class="form-control" id="AT_field_{{name}}" placeholder="{{placeholder}}">
-                {{#if hasFeedback}}
-                  <span class="glyphicon glyphicon-remove form-control-feedback {{showError}}"></span>
-                {{/if}}
-                <p class="help-block {{showError}}">{{errorText}}</p>
-              </div>     
+              <div class="row">
+                <div class="large-12 columns">
+                  {{#if displayFormLabels}}
+                    <label class="{{#if hasError}}error{{/if}}">{{displayName}}
+                      <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{name}}" placeholder="{{placeholder}}">
+                    </label>
+                  {{else}}
+                    <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{name}}" placeholder="{{placeholder}}">
+                  {{/if}}
+                  {{#if hasError}}
+                    <small class="error">{{errorText}}</small>
+                  {{/if}}
+                </div>
+              </div>
             {{/if}}   
           {{/each}}
           {{#unless atfpwd}}
             <p><a href="#" id="at-fpwd">Forgot password?</a></p>
           {{/unless}}
-          <div class="btn btn-default" id="at-btn">{{buttonText}}</div>
+          <div class="button" id="at-btn">{{buttonText}}</div>
         </form>
         {{#unless atsgup}}
           <p class="at-signup-cta">Don't have an account? <a href="#" id="at-sgup">Sign Up</a></p>
@@ -69,7 +73,11 @@
             {{> atSocial}}
           {{/each}}
         </div>
-        <div class="btn btn-default" id="at-btn-logout">Logout</div>
+        <div class="row">
+          <div class="small-5 small-centered columns">
+            <div class="button expand" id="at-btn-logout">Logout</div>
+          </div>
+        </div>
     {{/unless}}    
   </div>
 </template>
@@ -77,7 +85,7 @@
 
 
 <template name='atSocial'>
-  <button class="btn {{disabled}}" id="at-{{this}}" name="{{this}}">
+  <button class="button {{disabled}}" id="at-{{this}}" name="{{this}}">
     {{#if unconfigured}}
         <i class="{{iconClass}}"></i> Configure {{capitalize this}}
     {{else}}
