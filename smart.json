@@ -1,0 +1,14 @@
+{
+    "name": "accounts-templates-foundation",
+    "description": "Accounts Templates styled for Zurb Foundation.",
+    "homepage": "http://accounts-templates.meteor.com",
+    "author": "Luca Mussi <ing.luca.mussi@gmail.com> (https://github.com/splendido)",
+    "version": "0.0.1",
+    "git": "https://github.com/splendido/accounts-templates-foundation.git",
+    "packages": {
+        "accounts-templates-core": {
+            "_path": "/home/idel/Projects/AccountsTemplates/accounts-templates-core",
+            "git": "https://github.com/splendido/accounts-templates-core.git"
+        }
+    }
+}
