@@ -7,7 +7,6 @@ Package.on_use(function(api, where) {
         'service-configuration',
         'accounts-base',
         'accounts-templates-core',
-        'accounts-merge',
         'templating',
         'less'
     ], 'client');
@@ -18,13 +17,6 @@ Package.on_use(function(api, where) {
         'lib/accounts-templates-foundation.less'
     ], ['client']);
 
-    /*
-    api.use([
-        'service-configuration',
-        'accounts-base',
-    ], ['client', 'server']);
-    */
-
     api.use([
         'service-configuration',
         'accounts-password',
@@ -33,7 +25,6 @@ Package.on_use(function(api, where) {
     ], 'server');
 
     api.imply([
-        'accounts-base',
         'accounts-templates-core',
         'service-configuration',
     ], ['client', 'server']);
