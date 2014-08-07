@@ -7,33 +7,28 @@
 </template>
 
 <template name="signinForm">
-  <div class="at">
-    {{#unless currentUser}}
-      {{#if stateIs 'fpwd'}}
-        <h3> {{t9n "resetYourPassword"}} </h3>
+  {{#unless hide}}
+    <div class="at">
+      {{#if showTitle}}
+        <h3>{{title}}</h3>
       {{/if}}
-      {{#if stateIs 'sgin'}}
-        {{#if otherLoginServices}}
-          <div class="at-social">
-            {{#each loginServices}}
-              {{> atSocial}}
-            {{/each}}
-            {{#if passwordLoginService}}
-              <div class="email-option">
-                <strong class="line-thru or-sign-in">{{t9n "OR"}}</strong>
-              </div>
-            {{/if}}
-          </div>
-        {{/if}}
-        {{#unless otherLoginServices}}
-          <div class="email-option">
-            <h3>{{t9n "signIn"}}</h3>
-          </div>
-        {{/unless}}
+      {{#if showSignInLink}}
+        <p class="at-signin-cta">
+          {{t9n "ifYouAlreadyHaveAnAccount"}} 
+          <a href="{{signInLink}}" id="at-sgin" class="{{disabled}}">{{t9n "signin"}}</a>.
+        </p>
       {{/if}}
-      {{#if stateIs 'sgup'}}
-        <h3>{{t9n "createAccount"}}</h3>
-        <p class="at-signin-cta">{{t9n "ifYouAlreadyHaveAnAccount"}} <a href="{{signInLink}}" id="at-sgin" class="{{disabled}}">{{t9n "signin"}}</a>.</p>
+      {{#if showLoginServices}}
+        <div class="at-social">
+          {{#each loginServices}}
+            {{> atSocial}}
+          {{/each}}
+        </div>
+      {{/if}}
+      {{#if showServicesSeparator}}
+        <div class="email-option">
+          <strong class="line-thru or-sign-in">{{t9n "OR"}}</strong>
+        </div>
       {{/if}}
       {{#if overallError}}
         <div id="atError">
@@ -45,92 +40,39 @@
           <div data-alert class="alert-box success radius">{{result}}</div>
         </div>
       {{/if}}
-      {{#if passwordLoginService}}
+      {{#if showPwdService}}
         <form role="form" id="at-form-login" class="at-form" novalidate>
           {{#each fields}}
-            {{#if displayField}}
-              {{> atInput}}
-            {{/if}}   
+            {{> atInput}}
           {{/each}}
-          {{#if showForgotPassword}}
+          {{#if showForgotPasswordLink}}
             <p><a href="{{forgotPwdLink}}" id="at-fpwd" class="{{disabled}}">{{t9n "forgotPassword"}}</a></p>
           {{/if}}
-          <button type='submit' class="button {{submitDisabled}} {{disabled}}" id="at-btn">{{buttonText}}</button>
+          <button type='submit' class="button {{submitDisabled}} {{disabled}}" id="at-btn">
+            {{buttonText}}
+          </button>
         </form>
-        {{#unless stateIs 'sgup'}}
-		  {{#if showSignUpLink}}
-            <p class="at-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{signUpLink}}" id="at-sgup" class="{{disabled}}">{{t9n "signUp"}}</a></p>
-          {{/if}}
-        {{/unless}}
+  		  {{#if showSignUpLink}}
+          <p class="at-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{signUpLink}}" id="at-sgup" class="{{disabled}}">{{t9n "signUp"}}</a></p>
+        {{/if}}
       {{/if}}
-    {{else}}
-        <h3>Hi {{signedInAs}}</h3>
-        {{#if showAddRemoveServices}}
-          <div class="at-social">
-            {{#each loginServices}}
-              {{> atSocial}}
-            {{/each}}
+      {{#if showSignOut}}
+          <div class="row">
+            <div class="small-5 small-centered columns">
+              <div class="button expand {{disabled}}" id="at-btn-logout">{{t9n "signOut"}}</div>
+            </div>
           </div>
-        {{/if}}
-        <div class="row">
-          <div class="small-5 small-centered columns">
-            <div class="button expand {{disabled}}" id="at-btn-logout">{{t9n "signOut"}}</div>
-          </div>
-        </div>
-    {{/unless}}    
-  </div>
-</template>
-
-
-<template name="fullPageResetPassword">
-  <div class="row">
-    <div class="small-12 medium-4 large-3 medium-centered large-centered columns">
-      {{> atResetPassword}}
+      {{/if}}
     </div>
-  </div>
-</template>
-
-
-<template name='atResetPassword'>
-  <div class="at">
-    {{#if stateIs 'rpwd'}}
-      <h3>{{t9n "resetYourPassword"}}</h3>
-    {{/if}}
-    {{#if stateIs 'enro'}}
-      <h3>{{t9n "createAccount"}}</h3>
-    {{/if}}
-    {{#if overallError}}
-      <div id="atError">
-        <div data-alert class="alert-box alert radius">{{overallError}}</div>
-      </div>
-    {{/if}}
-    {{#if result}}
-      <div id="atResult">
-        <div class='alert alert-success'>{{result}}</div>
-      </div>
-    {{/if}}
-    <form role="form" id="at-form-pwd" class="at-form">
-      {{#with pwdField}}
-        {{> atInput}}
-      {{/with}}
-      <button class="button {{disabled}}" id="at-btn">
-        {{#if stateIs 'rpwd'}}
-          {{t9n "updateYourPassword"}}
-        {{/if}}
-        {{#if stateIs 'enro'}}
-          {{t9n "createAccount"}}
-        {{/if}}
-      </button>
-    </form>
-  </div>
+  {{/unless}}    
 </template>
 
 
 <template name='atSocial'>
   {{#if show}}
-        <button class="button {{disabled}}" id="at-{{this}}" name="{{this}}">
-          <i class="{{iconClass}}"></i> {{buttonText}}
-        </button>
+    <button class="button {{disabled}}" id="at-{{this}}" name="{{this}}">
+      <i class="{{iconClass}}"></i> {{buttonText}}
+    </button>
   {{/if}}
 </template>
 
