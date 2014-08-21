@@ -12,9 +12,14 @@ Package.on_use(function(api, where) {
     ], 'client');
 
     api.add_files([
-        'lib/accounts-templates-foundation.html',
-        'lib/accounts-templates-foundation.js',
-        'lib/accounts-templates-foundation.less'
+        'lib/at_form.html',
+        'lib/at_form.js',
+        'lib/at_input.html',
+        'lib/at_input.js',
+        'lib/at_social.html',
+        'lib/at_social.js',
+        'lib/full_page_at_form.html',
+        'lib/at_foundation.less'
     ], ['client']);
 
     api.use([
