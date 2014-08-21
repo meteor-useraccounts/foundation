@@ -3,8 +3,9 @@
     "description": "Accounts Templates styled for Zurb Foundation.",
     "homepage": "http://accounts-templates.meteor.com",
     "author": "Luca Mussi <ing.luca.mussi@gmail.com> (https://github.com/splendido)",
-    "version": "0.0.16.1",
+    "version": "0.0.16.2",
     "git": "https://github.com/splendido/accounts-templates-foundation.git",
-    "packages": "0.0.16"
+    "packages": {
+        "accounts-templates-core": "0.0.16"
     }
 }
