@@ -1,7 +1,7 @@
 <template name='atInput'>
   <div class="row">
     <div class="large-12 columns">
-      {{#if displayFormLabels}}
+      {{#if showLabels}}
         <label class="{{#if hasError}}error{{/if}}">{{displayName}} {{#unless required}}({{t9n "optional"}}){{/unless}}
           <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{name}}" placeholder="{{placeholder}}" {{disabled}}>
         </label>
