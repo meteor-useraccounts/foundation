@@ -3,10 +3,10 @@
     <div class="large-12 columns">
       {{#if showLabels}}
         <label class="{{#if hasError}}error{{/if}}">{{displayName}} {{#unless required}}({{t9n "optional"}}){{/unless}}
-          <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{name}}" placeholder="{{placeholder}}" {{disabled}}>
+          <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{_id}}" name="AT_field_{{_id}}" placeholder="{{placeholder}}" {{disabled}}>
         </label>
       {{else}}
-        <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{name}}" placeholder="{{placeholder}}" {{disabled}}>
+        <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{_id}}" name="AT_field_{{_id}}" placeholder="{{placeholder}}" {{disabled}}>
       {{/if}}
       {{#if hasError}}
         <small class="error">{{errorText}}</small>

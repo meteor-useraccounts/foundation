@@ -7,7 +7,7 @@
       {{#if showSignInLink}}
         <p class="at-signin-cta">
           {{t9n "ifYouAlreadyHaveAnAccount"}} 
-          <a href="{{signInLink}}" id="at-signIn" class="at-link {{disabled}}">{{t9n "signin"}}</a>.
+          <a href="{{signInLink}}" id="at-signIn" class="at-link {{disabled}}">{{t9n "signin"}}</a>
         </p>
       {{/if}}
       {{#if showLoginServices}}
@@ -24,7 +24,11 @@
       {{/if}}
       {{#if overallError}}
         <div id="atError">
-          <div data-alert class="alert-box alert radius">{{overallError}}</div>
+          <div data-alert class="alert-box alert radius">
+            {{#each overallError}}
+              <p>{{this}}</p>
+            {{/each}}
+          </div>
         </div>
       {{/if}}
       {{#if result}}
@@ -40,7 +44,7 @@
           {{#if showForgotPasswordLink}}
             <p><a href="{{forgotPwdLink}}" id="at-forgotPwd" class="at-link {{disabled}}">{{t9n "forgotPassword"}}</a></p>
           {{/if}}
-          <button type='submit' class="button {{submitDisabled}} {{disabled}}" id="at-btn">
+          <button type="submit" class="button {{submitDisabled}} {{disabled}}" id="at-btn">
             {{buttonText}}
           </button>
         </form>
@@ -63,5 +67,5 @@
         </p>
       {{/if}}
     </div>
-  {{/unless}}    
+  {{/unless}}
 </template>
