@@ -1,186 +1,148 @@
-.at {
+.at-form {
   float: none;
   margin: auto;
   overflow: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 10px;
   padding: 15px;
 
-  //a.disabled {
-  //  color: #444;    
-  //}
+  p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
 
-  h3 {
+.at-title {
+    h3 {
     margin-top: 0px;
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 800;
     text-align: center;
   }
+}
+
+.at-link.disabled {
+  color: #444;    
+}
+
+.at-signin-link {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.at-error, .at-result {
+  text-align: center;
 
   p {
-    font-size: 15px;
-    line-height: 20px;
-  }
-
-  fieldset {
-    margin-top: 40px;
-  }
-
-  .at-signin-cta {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .at-agreement {
-    margin-top: 20px;
-    font-size: 13px;
+    margin-bottom: 3px;
   }
 }
 
-
-.at-social {
+.at-oauth {
   margin-top: 10px;
+}
 
+button.at-social-btn {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 16px;
 
-  button {
-    display: block;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 10px;
-    padding: 8px 10px;
-    border-radius: 5px;
-    font-size: 16px;
+  i {
+    float: left;
+    width: 40px;
+    font-size: 20px;
+    margin-top: 1px;
+    padding-right: 15px;
+    padding-left: 5px;
+    border-right: 1px solid rgba(0,0,0,0.2);
+  }
 
-    i {
-      float: left;
-      width: 40px;
-      font-size: 20px;
-      margin-top: 1px;
-      padding-right: 15px;
-      padding-left: 5px;
-      border-right: 1px solid rgba(0,0,0,0.2);
+  &#at-facebook {
+    background: #3B5998;
+    color: #fff;
+    &.disabled {
+      color: #ddd;
+      background: #666666;
     }
-
-
-    &#at-facebook {
-      background: #3B5998;
-      color: #fff;
-
-      &.disabled {
-        color: #ddd;
-        background: #666666;
-      }
-
-      &:hover {
-        background: #2C4780;
-      }
+    &:hover {
+      background: #2C4780;
     }
+  }
 
-    &#at-linkedin {
-      background: #338AB0;
-      color: #fff;
-
-      &.disabled {
-        color: #ddd;
-        background: #666666;
-      }
-
-      &:hover {
-        background: #0571A6;
-      }
+  &#at-linkedin {
+    background: #338AB0;
+    color: #fff;
+    &.disabled {
+      color: #ddd;
+      background: #666666;
     }
-
-    &#at-twitter {
-      background: #4099FF;
-      color: #fff;
-
-      &.disabled {
-        color: #ddd;
-        background: #666666;
-      }
-
-      &:hover {
-        background: #3288EB;
-      }
+    &:hover {
+      background: #0571A6;
     }
+  }
 
-    &#at-google {
-      background: #db5a3c;
-      color: #fff;
-
-      &.disabled {
-        color: #ddd;
-        background: #666666;
-      }
-
-      &:hover {
-        background: #CA4C2E;
-      }
+  &#at-twitter {
+    background: #4099FF;
+    color: #fff;
+    &.disabled {
+      color: #ddd;
+      background: #666666;
     }
-
-    &#at-github {
-      background: #666;
-      color: #fff;
-
-      &.disabled {
-        color: #ddd;
-        background: #666666;
-      }
-
-      &:hover {
-        background: #555;
-      }
+    &:hover {
+      background: #3288EB;
     }
+  }
 
+  &#at-google {
+    background: #db5a3c;
+    color: #fff;
+    &.disabled {
+      color: #ddd;
+      background: #666666;
+    }
+    &:hover {
+      background: #CA4C2E;
+    }
+  }
 
+  &#at-github {
+    background: #666;
+    color: #fff;
+    &.disabled {
+      color: #ddd;
+      background: #666666;
+    }
+    &:hover {
+      background: #555;
+    }
   }
 }
 
-.email-option {
+.at-sep {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 15px;
+  padding-right: 15px;
   text-align: center;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
 
   .line-thru {
-    display: block;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 12px;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-
-    &:before {
-      width: 40px;
-      height: 10px;
-      background-color: #f5f5f5;
-      content: '';
-      margin: -5px 0 0 -20px;
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      z-index: -1;
-    }
-
-    &:after {
-      border-bottom: 1px solid #999;
-      content: '';
-      display: block;
-      position: absolute;
-      top: 49%;
-      width: 100%;
-      z-index: -2;
-    }
-
-    &.or-sign-in {
-      margin-bottom: 30px;
-    }
+    top: 11px;
+    border-bottom: 1px solid #999;
   }
 }
 
-.at-form {
+.at-pwd-form > form {
   margin-top: 20px;
 
   label {
@@ -188,19 +150,19 @@
     font-weight: 500;
     font-size: 14px;
   }
-
-  input { 
-    background-color: #EEE;
-  }
-
-  div#at-btn div#at-back-btn{
-    font-size: 16px;
-    padding: 10px 12px;
-    margin-top: 25px;
-  }
 }
 
-.at-signup-cta {
+#at-btn{
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+.at-signup-link {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.at-terms-link {
   text-align: center;
   margin-top: 20px;
   font-size: 16px;

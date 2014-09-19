@@ -2,12 +2,11 @@
   <div class="row">
     <div class="large-12 columns">
       {{#if showLabels}}
-        <label class="{{#if hasError}}error{{/if}}">{{displayName}} {{#unless required}}({{t9n "optional"}}){{/unless}}
-          <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{_id}}" name="AT_field_{{_id}}" placeholder="{{placeholder}}" {{disabled}}>
+        <label class="{{#if hasError}}error{{/if}}" for="AT_field_{{_id}}">
+          {{displayName}} {{#unless required}}{{optionalText}}{{/unless}}
         </label>
-      {{else}}
-        <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{_id}}" name="AT_field_{{_id}}" placeholder="{{placeholder}}" {{disabled}}>
       {{/if}}
+      <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{_id}}" name="AT_field_{{_id}}" placeholder="{{placeholder}}" aria-label="{{displayName}} {{#unless required}}{{optionalText}}{{/unless}}" {{disabled}}>
       {{#if hasError}}
         <small class="error">{{errorText}}</small>
       {{/if}}

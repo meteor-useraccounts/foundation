@@ -1,70 +1,32 @@
 <template name="atForm">
   {{#unless hide}}
-    <div class="at">
+    <div class="at-form">
       {{#if showTitle}}
-        <h3>{{title}}</h3>
+        {{> atTitle}}
       {{/if}}
       {{#if showSignInLink}}
-        <p class="at-signin-cta">
-          {{t9n "ifYouAlreadyHaveAnAccount"}} 
-          <a href="{{signInLink}}" id="at-signIn" class="at-link {{disabled}}">{{t9n "signin"}}</a>
-        </p>
+        {{> atSigninLink}}
       {{/if}}
       {{#if showOauthServices}}
-        <div class="at-social">
-          {{#each oauthService}}
-            {{> atSocial}}
-          {{/each}}
-        </div>
+        {{> atOauth}}
       {{/if}}
       {{#if showServicesSeparator}}
-        <div class="email-option">
-          <strong class="line-thru or-sign-in">{{t9n "OR"}}</strong>
-        </div>
+        {{> atSep}}
       {{/if}}
-      {{#if overallError}}
-        <div id="atError">
-          <div data-alert class="alert-box alert radius">
-            {{#each overallError}}
-              <p>{{errorText}}</p>
-            {{/each}}
-          </div>
-        </div>
+      {{#if showError}}
+        {{> atError}}
       {{/if}}
-      {{#if result}}
-        <div id="atResult">
-          <div data-alert class="alert-box success radius">{{result}}</div>
-        </div>
+      {{#if showResult}}
+        {{> atResult}}
       {{/if}}
-      {{#if showPwdService}}
-        <form role="form" id="at-form" class="at-form" novalidate>
-          {{#each fields}}
-            {{> atInput}}
-          {{/each}}
-          {{#if showForgotPasswordLink}}
-            <p><a href="{{forgotPwdLink}}" id="at-forgotPwd" class="at-link {{disabled}}">{{t9n "forgotPassword"}}</a></p>
-          {{/if}}
-          <button type="submit" class="button {{submitDisabled}} {{disabled}}" id="at-btn">
-            {{buttonText}}
-          </button>
-        </form>
-        {{#if showSignUpLink}}
-          <p class="at-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{signUpLink}}" id="at-signUp" class="at-link {{disabled}}">{{t9n "signUp"}}</a></p>
-        {{/if}}
+      {{#if showPwdForm}}
+        {{> atPwdForm}}
+      {{/if}}
+      {{#if showSignUpLink}}
+        {{> atSignupLink}}
       {{/if}}
       {{#if showTermsLink}}
-        <p class="at-agreement">
-          {{t9n "clickAgree"}}
-          {{#if privacyUrl}}
-            <a href="{{privacyUrl}}" class="{{disabled}}">{{t9n "privacyPolicy"}}</a>
-          {{/if}}
-          {{#if showTermsAnd}}
-            {{t9n "and"}}
-          {{/if}}
-          {{#if termsUrl}}
-            <a href="{{termsUrl}}" class="{{disabled}}">{{t9n "terms"}}</a>
-          {{/if}}
-        </p>
+        {{> atTermsLink}}
       {{/if}}
     </div>
   {{/unless}}
