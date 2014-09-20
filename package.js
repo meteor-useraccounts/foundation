@@ -1,23 +1,25 @@
 Package.describe({
     summary: "Accounts Templates styled for Zurb Foundation.",
-    version: "0.9.0",
+    version: "0.9.3",
     name: "splendido:accounts-templates-foundation",
     git: "https://github.com/splendido/accounts-templates-foundation.git",
 });
 
 Package.on_use(function(api, where) {
+    api.versionsFrom("METEOR@0.9.2.2");
+
     api.use([
-        'splendido:accounts-templates-core@0.9.0',
-        'templating@1.0.6',
-        'less@1.0.8'
-    ], 'client');
+        "less",
+        "templating",
+    ], "client");
+
     api.use([
-        'splendido:accounts-templates-core@0.9.0',
-    ], 'server');
+        "splendido:accounts-templates-core",
+    ], ["client", "server"]);
 
     api.imply([
-        'splendido:accounts-templates-core@0.9.0',
-    ], ['client', 'server']);
+        "splendido:accounts-templates-core@0.9.3",
+    ], ["client", "server"]);
 
     api.add_files([
         'lib/at_error.html',
@@ -56,7 +58,7 @@ Package.on_use(function(api, where) {
 Package.on_test(function(api) {
     api.use([
         'splendido:accounts-templates-foundation',
-        'splendido:accounts-templates-core@0.9.0',
+        'splendido:accounts-templates-core@0.9.3',
     ]);
 
     api.use([
@@ -66,6 +68,6 @@ Package.on_test(function(api) {
     ], ['client', 'server']);
 
     api.add_files([
-        'tests/accounts-templates-foundation_tests.js'
+        'tests/tests.js'
     ], ['client', 'server']);
 });
