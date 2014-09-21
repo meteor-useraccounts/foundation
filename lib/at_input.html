@@ -1,12 +1,12 @@
 <template name='atInput'>
-  <div class="row">
+  <div class="at-input row">
     <div class="large-12 columns">
       {{#if showLabels}}
-        <label class="{{#if hasError}}error{{/if}}" for="AT_field_{{_id}}">
+        <label class="{{#if hasError}}error{{/if}}" for="at-field-{{_id}}">
           {{displayName}} {{#unless required}}{{optionalText}}{{/unless}}
         </label>
       {{/if}}
-      <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="AT_field_{{_id}}" name="AT_field_{{_id}}" placeholder="{{placeholder}}" aria-label="{{displayName}} {{#unless required}}{{optionalText}}{{/unless}}" {{disabled}}>
+      <input type="{{type}}" class="{{#if hasError}}error{{/if}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" aria-label="{{displayName}} {{#unless required}}{{optionalText}}{{/unless}}" {{disabled}}>
       {{#if hasError}}
         <small class="error">{{errorText}}</small>
       {{/if}}
