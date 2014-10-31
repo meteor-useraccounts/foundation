@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/useraccounts/foundation.svg?branch=master)](https://travis-ci.org/useraccounts/foundation)
-accounts-templates-foundation
-=============================
+useraccounts:foundation
+=======================
 
 Meteor sign up and sign in templates styled for Zurb Foundation
 
