@@ -9,11 +9,11 @@ This package depends on [accounts-templates-core](https://github.com/useraccount
 Learn more [here](http://accounts-templates.meteor.com) or have a look at a [live demo application](http://accounts-templates-foundation.meteor.com) or at the full [documentation](https://github.com/useraccounts/core).
 
 
-## Warning!
+## Bring Your Own Foundation
 
 Adding this package with `mrt add useraccounts:foundation` does not add any other packages providing Zurb Foundation. This is to let you choose the flavour you prefer, being it compiled, less, sass, or from CDN!
 
-At the moment it is up to date with Foundation 5.3.3.
+At the moment it is up to date with Foundation 5.4.7.
 
 
 ## Contributing
