@@ -4,7 +4,7 @@ useraccounts:foundation
 
 Meteor sign up and sign in templates styled for Zurb Foundation
 
-This package depends on [accounts-templates-core](https://github.com/useraccounts/core.git)
+This package depends on [useraccounts:core](https://github.com/useraccounts/core.git)
 
 Learn more [here](http://accounts-templates.meteor.com) or have a look at a [live demo application](http://accounts-templates-foundation.meteor.com) or at the full [documentation](https://github.com/useraccounts/core).
 
