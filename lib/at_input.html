@@ -3,7 +3,7 @@
 </template>
 
 <template name="atTextInput">
-  <div class="at-input row">
+  <div class="at-input row {{#if isValidating}}validating{{/if}}">
     <div class="large-12 columns">
       {{#if showLabels}}
         <label class="{{#if hasError}}error{{/if}}" for="at-field-{{_id}}">
