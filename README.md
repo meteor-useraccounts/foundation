@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/useraccounts/foundation.svg?branch=master)](https://travis-ci.org/meteor-useraccounts/foundation)
+[![Build Status](https://travis-ci.org/meteor-useraccounts/foundation.svg?branch=master)](https://travis-ci.org/meteor-useraccounts/foundation)
 useraccounts:foundation
 =======================
 
@@ -11,7 +11,7 @@ Learn more [here](http://accounts-templates.meteor.com) or have a look at a [liv
 
 ## Bring Your Own Foundation
 
-Adding this package with `mrt add useraccounts:foundation` does not add any other packages providing Zurb Foundation. This is to let you choose the flavour you prefer, being it compiled, less, sass, or from CDN!
+Adding this package with `meteor add useraccounts:foundation` does not add any other packages providing Zurb Foundation. This is to let you choose the flavour you prefer, being it compiled, less, sass, or from CDN!
 
 At the moment it is up to date with Foundation 5.4.7.
 
