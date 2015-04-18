@@ -1,6 +1,6 @@
 Package.describe({
     summary: "Accounts Templates styled for Zurb Foundation.",
-    version: "1.9.0",
+    version: "1.8.1",
     name: "useraccounts:foundation",
     git: "https://github.com/meteor-useraccounts/foundation.git",
 });
