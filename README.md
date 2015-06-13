@@ -6,7 +6,7 @@ Meteor sign up and sign in templates styled for Zurb Foundation
 
 This package depends on [useraccounts:core](https://atmospherejs.com/useraccounts/core)
 
-Learn more [here](http://useraccounts.meteor.com) or have a look at a [live demo application](http://accounts-templates-foundation.meteor.com) or at the full [documentation](https://github.com/meteor-useraccounts/core).
+Learn more [here](http://useraccounts.meteor.com) or have a look at a [live demo application](http://useraccounts-foundation.meteor.com) or at the full [documentation](https://github.com/meteor-useraccounts/core).
 
 
 ## Bring Your Own Foundation
