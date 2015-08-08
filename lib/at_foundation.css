@@ -6,44 +6,36 @@
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 15px;
-
-  p {
-    font-size: 15px;
-    line-height: 20px;
-  }
 }
-
-.at-title {
-  h3 {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 800;
-    text-align: center;
-  }
+.at-form p {
+  font-size: 15px;
+  line-height: 20px;
 }
-
+.at-title h3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+}
 .at-link.disabled {
-  color: #444;    
+  color: #444;
 }
-
 .at-signin-link {
   margin-bottom: 30px;
   text-align: center;
 }
-
-.at-error, .at-result {
+.at-error,
+.at-result {
   text-align: center;
-
-  p {
-    margin-bottom: 3px;
-  }
 }
-
+.at-error p,
+.at-result p {
+  margin-bottom: 3px;
+}
 .at-oauth {
   margin-top: 10px;
 }
-
 button.at-social-btn {
   display: block;
   width: 100%;
@@ -52,78 +44,71 @@ button.at-social-btn {
   padding: 8px 10px;
   border-radius: 5px;
   font-size: 16px;
-
-  i {
-    float: left;
-    width: 40px;
-    font-size: 20px;
-    margin-top: 1px;
-    padding-right: 15px;
-    padding-left: 5px;
-    border-right: 1px solid rgba(0,0,0,0.2);
-  }
-
-  &#at-facebook {
-    background: #3B5998;
-    color: #fff;
-    &.disabled {
-      color: #ddd;
-      background: #666666;
-    }
-    &:hover {
-      background: #2C4780;
-    }
-  }
-
-  &#at-linkedin {
-    background: #338AB0;
-    color: #fff;
-    &.disabled {
-      color: #ddd;
-      background: #666666;
-    }
-    &:hover {
-      background: #0571A6;
-    }
-  }
-
-  &#at-twitter {
-    background: #4099FF;
-    color: #fff;
-    &.disabled {
-      color: #ddd;
-      background: #666666;
-    }
-    &:hover {
-      background: #3288EB;
-    }
-  }
-
-  &#at-google {
-    background: #db5a3c;
-    color: #fff;
-    &.disabled {
-      color: #ddd;
-      background: #666666;
-    }
-    &:hover {
-      background: #CA4C2E;
-    }
-  }
-
-  &#at-github {
-    background: #666;
-    color: #fff;
-    &.disabled {
-      color: #ddd;
-      background: #666666;
-    }
-    &:hover {
-      background: #555;
-    }
-  }
 }
-
+button.at-social-btn i {
+  float: left;
+  width: 40px;
+  font-size: 20px;
+  margin-top: 1px;
+  padding-right: 15px;
+  padding-left: 5px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+button.at-social-btn#at-facebook {
+  background: #3B5998;
+  color: #fff;
+}
+button.at-social-btn#at-facebook.disabled {
+  color: #ddd;
+  background: #666666;
+}
+button.at-social-btn#at-facebook:hover {
+  background: #2C4780;
+}
+button.at-social-btn#at-linkedin {
+  background: #338AB0;
+  color: #fff;
+}
+button.at-social-btn#at-linkedin.disabled {
+  color: #ddd;
+  background: #666666;
+}
+button.at-social-btn#at-linkedin:hover {
+  background: #0571A6;
+}
+button.at-social-btn#at-twitter {
+  background: #4099FF;
+  color: #fff;
+}
+button.at-social-btn#at-twitter.disabled {
+  color: #ddd;
+  background: #666666;
+}
+button.at-social-btn#at-twitter:hover {
+  background: #3288EB;
+}
+button.at-social-btn#at-google {
+  background: #db5a3c;
+  color: #fff;
+}
+button.at-social-btn#at-google.disabled {
+  color: #ddd;
+  background: #666666;
+}
+button.at-social-btn#at-google:hover {
+  background: #CA4C2E;
+}
+button.at-social-btn#at-github {
+  background: #666;
+  color: #fff;
+}
+button.at-social-btn#at-github.disabled {
+  color: #ddd;
+  background: #666666;
+}
+button.at-social-btn#at-github:hover {
+  background: #555;
+}
 .at-sep {
   margin-top: 40px;
   margin-bottom: 30px;
@@ -135,37 +120,30 @@ button.at-social-btn {
   font-size: 12px;
   font-weight: bold;
   width: 100%;
-
-  .line-thru {
-    top: 11px;
-    border-bottom: 1px solid #999;
-  }
 }
-
+.at-sep .line-thru {
+  top: 11px;
+  border-bottom: 1px solid #999;
+}
 .at-input.validating * {
-  cursor:progress;
+  cursor: progress;
 }
-
 .at-pwd-form > form {
   margin-top: 20px;
-
-  label {
-    margin-bottom: 5px;
-    font-weight: 500;
-    font-size: 14px;
-  }
 }
-
-#at-btn{
+.at-pwd-form > form label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+#at-btn {
   font-size: 16px;
   padding: 10px 12px;
 }
-
 .at-signup-link {
   margin-top: 20px;
   font-size: 13px;
 }
-
 .at-terms-link {
   text-align: center;
   margin-top: 20px;
