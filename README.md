@@ -1,4 +1,6 @@
+[![Meteor Icon](http://icon.meteor.com/package/useraccounts:foundation)](https://atmospherejs.com/useraccounts/foundation)
 [![Build Status](https://travis-ci.org/meteor-useraccounts/foundation.svg?branch=master)](https://travis-ci.org/meteor-useraccounts/foundation)
+
 useraccounts:foundation
 =======================
 
